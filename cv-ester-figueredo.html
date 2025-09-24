@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curriculum Vitae de Ester Elizabeth Figueredo - Técnico Superior en Preceptor">
+    <meta name="keywords" content="Ester Figueredo, Preceptor, Educación, Curriculum, CV">
+    <meta name="author" content="Ester Elizabeth Figueredo">
+    <title>CV - Ester Elizabeth Figueredo</title>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --background: #ffffff;
+            --background-alt: #f8fafc;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 30px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: var(--text-secondary);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-lg);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .header-info {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .header-info h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
+        }
+        
+        .header-info .title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            opacity: 1;
+        }
+        
+        .contact-item i {
+            width: 18px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: #fbbf24;
+        }
+        
+        /* Navigation */
+        .nav {
+            background: var(--background);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        /* Main Content */
+        .main {
+            padding: 60px 0;
+        }
+        
+        .section {
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        /* Resumen */
+        .summary {
+            background: var(--background-alt);
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Experiencia */
+        .experience-grid {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .experience-item {
+            background: var(--background);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .experience-header {
+            margin-bottom: 15px;
+        }
+        
+        .experience-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+        
+        .experience-company {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .experience-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .experience-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .experience-description ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        .experience-description li {
+            margin-bottom: 8px;
+        }
+        
+        /* Educación */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .education-item {
+            background: var(--background);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .education-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        
+        .education-institution {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        /* Habilidades */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .skills-category h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .skills-category i {
+            color: var(--primary-color);
+        }
+        
+        .skill-item {
+            margin-bottom: 20px;
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .skill-level {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+            width: 0%;
+            transition: width 1s ease 0.5s;
+        }
+        
+        .skills-category.animate .skill-progress {
+            width: var(--progress, 0%);
+        }
+        
+        /* Idiomas */
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .language-item {
+            background: var(--background);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .language-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .language-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        
+        .language-level {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        /* Download Button */
+        .download-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .contact-info {
+                align-items: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .header-info h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 40px 0;
+            }
+            
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+            
+            .header-info h1 {
+                font-size: 1.75rem;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            body {
+                font-size: 12px;
+                line-height: 1.4;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .header {
+                background: var(--primary-color) !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 30px;
+            }
+            
+            .experience-item,
+            .education-item {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+            
+            .download-section,
+            .footer {
+                display: none;
+            }
+            
+            .skill-progress {
+                width: var(--progress, 0%) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="header-info">
+                    <h1>Ester Elizabeth Figueredo</h1>
+                    <p class="title">Técnico Superior en Preceptor</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:esterelizabethfigueredo@gmail.com">esterelizabethfigueredo@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>3743595472</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Salta 2291</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Ester96" target="_blank">github.com/Ester96</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#resumen" class="nav-link">Resumen</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+                <li><a href="#educacion" class="nav-link">Educación</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#idiomas" class="nav-link">Idiomas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Resumen -->
+            <section id="resumen" class="section">
+                <h2 class="section-title">Resumen Profesional</h2>
+                <div class="summary">
+                    <p>Profesional técnico superior en preceptoría con sólida formación académica y compromiso con la educación. Poseo experiencia en el acompañamiento y orientación de estudiantes, así como en la gestión administrativa educativa. Me caracterizo por mi empatía, puntualidad y capacidad para trabajar en equipo, cualidades esenciales para crear un ambiente educativo positivo y productivo.</p>
+                </div>
+            </section>
+
+            <!-- Experiencia -->
+            <section id="experiencia" class="section">
+                <h2 class="section-title">Experiencia Laboral</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Técnico en Preceptoría</h3>
+                            <p class="experience-company">Instituciones Educativas</p>
+                            <p class="experience-date">2023 - Presente</p>
+                        </div>
+                        <div class="experience-description">
+                            <p>Responsable del acompañamiento pedagógico y disciplinario de estudiantes, garantizando un ambiente educativo óptimo.</p>
+                            <ul>
+                                <li>Supervisión y orientación de estudiantes en actividades académicas</li>
+                                <li>Gestión de registros y documentación administrativa</li>
+                                <li>Comunicación efectiva con docentes, estudiantes y familias</li>
+                                <li>Participación en proyectos institucionales educativos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educación -->
+            <section id="educacion" class="section">
+                <h2 class="section-title">Educación</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="education-title">Técnico Superior en Preceptor</h3>
+                        <p class="education-institution">Instituto Alfa</p>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3 class="education-title">Bachillerato Completo</h3>
+                        <p class="education-institution">Bachillerato Nº 27</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Habilidades -->
+            <section id="habilidades" class="section">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h3><i class="fas fa-cogs"></i>Habilidades Técnicas</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Gestión Administrativa Educativa</span>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Sistemas de Información Educativa</span>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Microsoft Office</span>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Documentación y Registros</span>
+                                <span class="skill-level">Experto</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h3><i class="fas fa-heart"></i>Habilidades Blandas</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Empatía</span>
+                                <span class="skill-level">Experto</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Puntualidad</span>
+                                <span class="skill-level">Experto</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Trabajo en Equipo</span>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Comunicación</span>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Idiomas -->
+            <section id="idiomas" class="section">
+                <h2 class="section-title">Idiomas</h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <h3 class="language-name">Español</h3>
+                        <p class="language-level">Nativo</p>
+                    </div>
+                    <div class="language-item">
+                        <h3 class="language-name">Inglés</h3>
+                        <p class="language-level">Básico</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download Button -->
+            <div class="download-section">
+                <button class="download-btn" onclick="handleDownload()">
+                    <i class="fas fa-download"></i>
+                    Descargar CV en PDF
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:esterelizabethfigueredo@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/Ester96" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="tel:3743595472" title="Teléfono">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Ester Elizabeth Figueredo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Actualización de navegación activa
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Animación de secciones al hacer scroll
+        function animateOnScroll() {
+            const sections = document.querySelectorAll('.section');
+            const skillsCateg
